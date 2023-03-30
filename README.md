@@ -1,1 +1,3 @@
-#TRIVSTER Trivia App v1.0.0
+# Trivster App
+
+Current App Version : 1.0.0
