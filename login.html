@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- Import the Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <!-- Initialize Firebase -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBQ73lWMENmPtC2tTyb7xE2xs9Fawpbhm8",
+            authDomain: "trivster-78fc7.firebaseapp.com",
+            projectId: "trivster-78fc7",
+            storageBucket: "trivster-78fc7.appspot.com",
+            messagingSenderId: "484062224094",
+            appId: "1:484062224094:web:da7341031eb3ff11f12c4f",
+            measurementId: "G-Q02M5Y7PSE"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <title>Login | Trivster</title>
+</head>
+<body>
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <h2 class="my-3"> Trivster  </h2>
+        <p> Please Log In to Use </p>
+        <form action="" class="container w-50">
+            <div class="example">
+                <h3> Email </h3>
+                <input type="email" class="w-100 mt-3" placeholder="email@example.com" id="userEmail">
+            </div>
+            <div class="example mt-3">
+                <h3> Password </h3>
+                <input type="password" class="w-100 mt-3" placeholder="your password" id="userPass">
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-primary mt-3 w-100" id="logInBtn"> Log In</button>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-secondary mt-3 w-100" id="logResBtn" onclick="signUpFunction()"> Reset </button>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
