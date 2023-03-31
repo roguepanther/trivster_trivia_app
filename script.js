@@ -1,10 +1,12 @@
 const generateButton = document.querySelector("#generateBtn");
 const resetButton = document.querySelector("#resetBtn");
 const quesAnswers = document.querySelector("#quesAnswers");
+
 // Initialise variables for displaying the answers
 const answer = document.querySelector("#answer");
 const categ = document.querySelector("#categ");
 const diff = document.querySelector("#diff");
+const showAnswer = document.querySelector('#showAnswerLink')
 // Initialise the variables for resetting the variables
 const retrievedAnsw = document.querySelector("retrievedAnsw");
 const retrievedCateg = document.querySelector(".retrievedCateg");
@@ -37,6 +39,7 @@ function getQuestion() {
       answer.innerText += data.results[0].question.toString();
       categ.innerText += data.results[0].category;
       diff.innerText += data.results[0].difficulty.toUpperCase();
+      showAnswerLink.style.display = "inline"
     })
     .catch((error) => console.error(error));
 }
@@ -53,12 +56,21 @@ function resetQuestions() {
   retrievedQues.style.display = "none";
   retrievedCateg.style.display = "none";
   retrievedDiff.style.display = "none";
+  showAnswerLink.style.display = "none";
 }
 
 function clearValues() {
   answer.innerText = "";
   categ.innerText = "";
   diff.innerText = "";
+}
+
+//TODO: Adding the functionality to show the correct answer when the anchor tag has been clicked
+function showCorrectAnswer() {
+  const h1Answer = document.createElement('h1');
+  h1Answer.textContent = data.results[0].correct_answer.toUpperCase();
+  const divRow = document.getElementById('answerRow');
+  divRow.appendChild(h1Answer)
 }
 
 // TODO: Implement the Login functionality with Firebase
